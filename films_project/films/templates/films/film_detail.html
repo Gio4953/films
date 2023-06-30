@@ -1,0 +1,5 @@
+<h1>{{ film.name }}</h1>
+<p>Year of Release: {{ film.year_of_release }}</p>
+<p>Length: {{ film.length }}</p>
+<a href="{% url 'film_update' film.pk %}">Update</a>
+<a href="{% url 'film_delete' film.pk %}">Delete</a>

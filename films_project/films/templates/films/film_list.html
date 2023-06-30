@@ -1,0 +1,9 @@
+<h1>Films</h1>
+<ul>
+  {% for film in films %}
+    <li><a href="{% url 'film_detail' film.pk %}">{{ film.name }}</a></li>
+  {% empty %}
+    <li>No films found.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'film_create' %}">Create a new film</a>
